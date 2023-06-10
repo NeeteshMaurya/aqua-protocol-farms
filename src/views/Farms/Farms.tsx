@@ -261,7 +261,7 @@ const Farms: React.FC = () => {
       },
       earned: {
         earnings: farm.userData ? getBalanceNumber(new BigNumber(farm.userData.earnings)) : null,
-        // pid: farm.pid,
+        // pid: farm.pid,  //me commented thids due to build error
       },
       liquidity: {
         liquidity: farm.liquidity,
