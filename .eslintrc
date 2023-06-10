@@ -14,9 +14,11 @@
     "extends": "@pancakeswap-libs/eslint-config-pancake",
     "rules": {
     "react/require-default-props": "off",
+    "react/destructuring-assignment": "off",
+    "react/no-unused-prop-types": "off",
     "no-console": ["warn", { "allow": ["info", "warn", "error"] }],
     "no-plusplus": 0,
-    "prefer-destructuring": ["error", { "object": false, "array": false }],
+    "prefer-destructuring": ["off", { "object": false, "array": false }],
     "no-underscore-dangle": 0,
     // Start temporary rules
     // These rules are here just to keep the lint error to 0 during the migration to the new rule set
