@@ -4,7 +4,7 @@ import { useWeb3React } from '@web3-react/core'
 
 export interface EarnedProps {
   earnings: number
-  pid: number
+  // pid: number
 }
 
 const Amount = styled.span<{ earned: number }>`

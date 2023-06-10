@@ -23,7 +23,7 @@ export interface FarmWithStakedValue extends Farm {
 
 interface FarmCardActionsProps {
   farm: FarmWithStakedValue
-  provider?: ProviderType
+  // provider?: ProviderType
   account?: string
   addLiquidityUrl?: string
 }

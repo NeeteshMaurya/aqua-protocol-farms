@@ -90,7 +90,7 @@ interface FarmCardProps {
   cakePrice?: BigNumber
   bnbPrice?: BigNumber
   ethPrice?: BigNumber
-  provider?: ProviderType
+  // provider?: ProviderType
   account?: string
 }
 
