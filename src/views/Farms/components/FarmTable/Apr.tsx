@@ -9,10 +9,10 @@ import useI18n from 'hooks/useI18n'
 
 export interface AprProps {
   value: string
-  // multiplier: string
+  multiplier: string
   lpLabel: string
   quoteTokenAdresses: Address
-  // quoteTokenSymbol: QuoteToken
+  quoteTokenSymbol: QuoteToken
   tokenAddresses: Address
   cakePrice: BigNumber
   originalValue: BigNumber
