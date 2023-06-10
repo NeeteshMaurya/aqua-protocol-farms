@@ -63,7 +63,7 @@ const FarmMobileCell = styled.td`
 `
 
 const Row: React.FunctionComponent<RowProps> = (props) => {
-  const { details } = props
+  const {apr, farm, earned, multiplier, liquidity, details } = props
   const [actionPanelToggled, setActionPanelToggled] = useState(false)
   const TranslateString = useI18n()
 
