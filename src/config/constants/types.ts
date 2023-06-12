@@ -1,7 +1,9 @@
 import { TranslatableText } from 'state/types'
 
 export type IfoStatus = 'idle' | 'coming_soon' | 'live' | 'finished'
-
+export type error = {
+  message: string
+}
 export interface Ifo {
   id: string
   isActive: boolean

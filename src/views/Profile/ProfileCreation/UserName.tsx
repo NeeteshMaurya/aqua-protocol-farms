@@ -131,7 +131,7 @@ const UserName: React.FC = () => {
         const data = await response.json()
         toastError(data?.error?.message)
       }
-    } catch (error) {
+    } catch (error:any) {
       toastError(error?.message ? error.message : JSON.stringify(error))
     } finally {
       setIsLoading(false)
