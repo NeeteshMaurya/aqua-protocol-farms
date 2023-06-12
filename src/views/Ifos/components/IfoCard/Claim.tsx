@@ -13,7 +13,6 @@ import MetaLabel from './MetaLabel'
 
 interface ClaimProps {
   ifo: Ifo
-  message:message
   contract: Contract
   userInfo: UserInfo
   isPendingTx: WalletIfoState['isPendingTx']
