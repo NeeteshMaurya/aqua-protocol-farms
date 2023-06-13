@@ -4,6 +4,7 @@ import { ResetCSS } from '@pancakeswap-libs/uikit'
 import BigNumber from 'bignumber.js'
 import useEagerConnect from 'hooks/useEagerConnect'
 import { useFetchPriceList, useFetchProfile, useFetchPublicData } from 'state/hooks'
+import Header from 'components/Header/header'
 import useGetDocumentTitlePrice from './hooks/useGetDocumentTitlePrice'
 import GlobalStyle from './style/Global'
 import Menu from './components/Menu'
@@ -45,7 +46,8 @@ const App: React.FC = () => {
     <Router history={history}>
       <ResetCSS />
       <GlobalStyle />
-      <Menu>
+      <Header />
+      {/* <Menu> */}
         <SuspenseWithChunkError fallback={<> </>}>
           <Switch>
             <Route path="/" exact>
@@ -89,7 +91,7 @@ const App: React.FC = () => {
             <Route component={NotFound} />
           </Switch>
         </SuspenseWithChunkError>
-      </Menu>
+      {/* </Menu> */}
       {/* <EasterEgg iterations={2} /> */}
       <ToastListener />
       <GlobalCheckBullHiccupClaimStatus />
