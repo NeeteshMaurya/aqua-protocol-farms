@@ -45,8 +45,9 @@ const App: React.FC = () => {
   return (
     <Router history={history}>
       <ResetCSS />
-      <GlobalStyle />
       <Header />
+      <GlobalStyle />
+      
       {/* <Menu> */}
         <SuspenseWithChunkError fallback={<> </>}>
           <Switch>
