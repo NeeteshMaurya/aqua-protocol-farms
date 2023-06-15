@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link, useHistory } from "react-router-dom";
 import { useWeb3React } from '@web3-react/core'
 import UnlockButton from "components/UnlockButton";
+import '../../assets/header.css'
 import logo from "../../assets/images/mainIcons/Avatar.png";
 import ethIcon from "../../assets/images/mainIcons/ethIcon.png";
 
@@ -20,7 +21,7 @@ const Header = () => {
 		<nav className="navbar navbar-expand-sm navbar-dark bg-dark" style={{width:'100%'}}>
 		<div className="container-fluid">
 			<a href="https://aqua-protocol-dex.vercel.app"><img style={{height:'40px',width:'40px'}} src={logo} alt="Logo" /></a>
-		 	<a className="navbar-brand text-white" href="https://aqua-protocol-dex.vercel.app" style={{marginLeft:"25px"}} >
+		 	<a className="navbar-brand text-white" href="https://aqua-protocol-dex.vercel.app" style={{marginLeft:"10px",fontSize:'18px'}} >
 		 	   AQUA PROTOCOL DEX
 	 	    </a>
 		   
@@ -30,14 +31,22 @@ const Header = () => {
 		   <div className="collapse navbar-collapse" id="navbarNav">
 		   <ul className="navbar-nav">
 		            <li className="nav-item">
-						<Link type="button" style={{fontWeight:'bold',borderRadius:'24px',marginLeft:'40px',padding:'10px',marginRight:'40px'}}
-						className="nav-link btn btn-primary btn-m border border-primary text-white" 
+						<Link type="button" style={{fontWeight:'bold',marginLeft:'30px',
+						padding:'10px',marginRight:'20px'}}
+						className="buttonn nav-link btn btn-m text-white" 
 						to="/farms">Farms</Link>
 					</li>
 					<li className="nav-item">
-						<Link type="button" style={{padding:'10px',fontWeight:'bold',borderRadius:'24px',marginLeft:'40px',marginRight:'40px'}}
-						className="nav-link btn btn-primary btn-m text-white"
+						<Link type="button" style={{padding:'10px',fontWeight:'bold',
+						marginLeft:'20px',marginRight:'20px'}}
+						className="buttonn nav-link btn btn-m text-white"
 						 to="/pools">Pools</Link>
+					</li>
+					<li className="nav-item">
+						<a type="button" style={{fontWeight:'bold',marginLeft:'30px',
+						padding:'10px',marginRight:'20px'}}
+						className="buttonn nav-link btn btn-m text-white" 
+						href="https://launch.aquaprotocol.com">Aquapad</a>
 					</li>
 		   </ul>
 		   </div>
