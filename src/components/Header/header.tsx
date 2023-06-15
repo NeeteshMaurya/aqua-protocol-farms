@@ -27,6 +27,20 @@ const Header = () => {
 		   <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 		   <span className="navbar-toggler-icon" />
 		   </button>
+		   <div className="collapse navbar-collapse" id="navbarNav">
+		   <ul className="navbar-nav">
+		            <li className="nav-item">
+						<Link type="button" style={{fontWeight:'bold',borderRadius:'24px',marginLeft:'40px',padding:'10px',marginRight:'40px'}}
+						className="nav-link btn btn-primary btn-m border border-primary text-white" 
+						to="/farms">Farms</Link>
+					</li>
+					<li className="nav-item">
+						<Link type="button" style={{padding:'10px',fontWeight:'bold',borderRadius:'24px',marginLeft:'40px',marginRight:'40px'}}
+						className="nav-link btn btn-primary btn-m text-white"
+						 to="/pools">Pools</Link>
+					</li>
+		   </ul>
+		   </div>
 		   <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
 			  <ul className="navbar-nav ">
 					<li className="nav-item " >
