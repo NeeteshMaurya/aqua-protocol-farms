@@ -20,9 +20,9 @@ const Header = () => {
 	return (
 		<nav className="navbar navbar-expand-sm navbar-dark bg-dark" style={{width:'100%'}}>
 		<div className="container-fluid">
-			<a href="https://aqua-protocol-dex.vercel.app"><img style={{height:'40px',width:'40px'}} src={logo} alt="Logo" /></a>
-		 	<a className="navbar-brand text-white" href="https://aqua-protocol-dex.vercel.app" style={{marginLeft:"10px",fontSize:'18px'}} >
-		 	   AQUA PROTOCOL DEX
+			<a href="https://www.aquaprotocol.com/"><img style={{height:'40px',width:'40px'}} src={logo} alt="Logo" /></a>
+		 	<a className="navbar-brand text-white" href="https://www.aquaprotocol.com/" style={{marginLeft:"10px",fontSize:'18px'}} >
+		 	   AQUA PROTOCOL
 	 	    </a>
 		   
 		   <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
