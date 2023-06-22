@@ -21,7 +21,7 @@ const Header = () => {
 	return (
 		<nav className="navbar navbar-expand-md navbg navbar-dark" style={{ width: "100%",}}>
 		 <div className="container-fluid">
-          <a href="https://aquaprotocol.com"><img className="logo" style={{height:'40px',width:'40px'}} src={logo} alt="logo" /></a>
+          <a href="https://www.aquaprotocol.com"><img className="logo" style={{height:'40px',width:'40px'}} src={logo} alt="logo" /></a>
               <button
                 className="navbar-toggler"
                 type="button"
