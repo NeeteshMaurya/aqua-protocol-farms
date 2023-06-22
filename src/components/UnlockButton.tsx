@@ -1,7 +1,9 @@
 import React from 'react'
 import { Button, useWalletModal } from '@pancakeswap-libs/uikit'
+import '../assets/header.css'
 import useAuth from 'hooks/useAuth'
 import useI18n from 'hooks/useI18n'
+
 
 const UnlockButton = (props) => {
   const TranslateString = useI18n()
@@ -9,10 +11,15 @@ const UnlockButton = (props) => {
   const { onPresentConnectModal } = useWalletModal(login, logout)
 
   return (
-    <Button onClick={onPresentConnectModal} {...props}>
-      {TranslateString(292, 'Unlock Wallet')}
-    </Button>
+    // eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions
+    <div className='navbarbtn nav-link buttonn btn text-white' onClick={onPresentConnectModal}>
+      Connect Wallet
+    </div>
+    // <Button className='' onClick={onPresentConnectModal} {...props}>
+    //   {TranslateString(292, 'Unlock Wallet')}
+    // </Button>
   )
 }
+
 
 export default UnlockButton

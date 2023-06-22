@@ -1,5 +1,5 @@
 import React, { useEffect, lazy } from 'react'
-import { Router, Redirect, Route, Switch } from 'react-router-dom'
+import { Router, Redirect, Route, Switch,HashRouter } from 'react-router-dom'
 import { ResetCSS } from '@pancakeswap-libs/uikit'
 import BigNumber from 'bignumber.js'
 import useEagerConnect from 'hooks/useEagerConnect'
@@ -42,13 +42,11 @@ const App: React.FC = () => {
   useFetchPriceList()
   useGetDocumentTitlePrice()
 
-  return (
+  return (    
     <Router history={history}>
       <ResetCSS />
       <Header />
       <GlobalStyle />
-      
-      {/* <Menu> */}
         <SuspenseWithChunkError fallback={<> </>}>
           <Switch>
             <Route path="/" exact>
