@@ -12,10 +12,10 @@ const UnlockButton = (props) => {
 
   return (
     // eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions
-    <div className='navbarbtn nav-link buttonn btn text-white' onClick={onPresentConnectModal}>
+    <div className='navbarbtn nav-link buttonn btn text-white connectwalletbtn' onClick={onPresentConnectModal}>
       Connect Wallet
     </div>
-    // <Button className='' onClick={onPresentConnectModal} {...props}>
+    // <Button className='navbarbtn nav-link buttonn btn text-white connectwalletbtn' onClick={onPresentConnectModal} {...props}>
     //   {TranslateString(292, 'Unlock Wallet')}
     // </Button>
   )
