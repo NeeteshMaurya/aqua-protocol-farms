@@ -27,9 +27,10 @@ const SearchInput: React.FC<Props> = ({ value, onChange }) => {
   const inputEl = useRef(null)
 
   return (
-    <Container toggled={toggled}>
-      <InputWrapper>
+    <Container toggled={toggled} >
+      <InputWrapper >
         <StyledInput
+        style={{background:'black',border:'1px solid #2b3750',fontFamily:'avenir'}}
           ref={inputEl}
           value={value}
           onChange={onChange}

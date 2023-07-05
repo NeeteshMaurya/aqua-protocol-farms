@@ -310,7 +310,7 @@ const Farms: React.FC = () => {
         <FlexLayout>
           <Route exact path={`${path}`}>
             {farmsStaked.map((farm) => (
-              <FarmCard
+              <FarmCard 
                 key={farm.pid}
                 farm={farm}
                 bnbPrice={bnbPrice}
@@ -346,10 +346,10 @@ const Farms: React.FC = () => {
   return (
     <>
       <Header>
-        <Heading as="h1" size="xxl" color="secondary" mb="24px">
+        <Heading style={{fontFamily:'avenir',color:'white'}} as="h1" size="xxl" color="secondary" mb="24px">
           {TranslateString(999, 'Farms')}
         </Heading>
-        <Heading size="lg" color="text">
+        <Heading style={{fontFamily:'avenir',color:'white'}} size="lg" color="text">
           {TranslateString(999, 'Stake Liquidity Pool (LP) tokens to earn.')}
         </Heading>
       </Header>
@@ -358,14 +358,14 @@ const Farms: React.FC = () => {
           <ViewControls>
             <ToggleView viewMode={viewMode} onToggle={(mode: ViewMode) => setViewMode(mode)} />
             <ToggleWrapper>
-              <Toggle checked={stackedOnly} onChange={() => setStackedOnly(!stackedOnly)} scale="sm" />
-              <Text> {TranslateString(1116, 'Staked only')}</Text>
+              <Toggle style={{backgroundColor:'black'}} checked={stackedOnly} onChange={() => setStackedOnly(!stackedOnly)} scale="sm" />
+              <Text style={{fontFamily:'avenir',color:'white'}}> {TranslateString(1116, 'Staked only')}</Text>
             </ToggleWrapper>
             <FarmTabButtons />
           </ViewControls>
           <FilterContainer>
             <LabelWrapper>
-              <Text>SORT BY</Text>
+              <Text style={{fontFamily:'avenir',color:'white'}}>SORT BY</Text>
               <Select
                 options={[
                   {
@@ -393,7 +393,7 @@ const Farms: React.FC = () => {
               />
             </LabelWrapper>
             <LabelWrapper style={{ marginLeft: 16 }}>
-              <Text>SEARCH</Text>
+              <Text style={{fontFamily:'avenir',color:'white'}}>SEARCH</Text>
               <SearchInput onChange={handleChangeQuery} value={query} />
             </LabelWrapper>
           </FilterContainer>

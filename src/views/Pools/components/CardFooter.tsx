@@ -111,7 +111,7 @@ const CardFooter: React.FC<Props> = ({
         <FlexFull>
           <Tag />
         </FlexFull>
-        <StyledDetailsButton onClick={handleClick}>
+        <StyledDetailsButton style={{fontFamily:'avenir',color:'white'}} onClick={handleClick}>
           {isOpen ? TranslateString(1066, 'Hide') : TranslateString(658, 'Details')} <Icon />
         </StyledDetailsButton>
       </Row>
@@ -119,7 +119,7 @@ const CardFooter: React.FC<Props> = ({
         <Details>
           <Row mb="4px">
             <FlexFull>
-              <Label>
+              <Label style={{fontFamily:'avenir',color:'white'}}>
                 {/* <span role="img" aria-label="syrup">
                   🥞{' '}
                 </span> */}
@@ -131,7 +131,7 @@ const CardFooter: React.FC<Props> = ({
           {blocksUntilStart > 0 && (
             <Row mb="4px">
               <FlexFull>
-                <Label>{TranslateString(410, 'Start')}:</Label>
+                <Label style={{fontFamily:'avenir',color:'white'}}>{TranslateString(410, 'Start')}:</Label>
               </FlexFull>
               <Balance fontSize="14px" isDisabled={isFinished} value={blocksUntilStart} decimals={0} />
             </Row>
@@ -139,18 +139,18 @@ const CardFooter: React.FC<Props> = ({
           {blocksUntilStart === 0 && blocksRemaining > 0 && (
             <Row mb="4px">
               <FlexFull>
-                <Label>{TranslateString(410, 'End')}:</Label>
+                <Label style={{fontFamily:'avenir',color:'white'}}>{TranslateString(410, 'End')}:</Label>
               </FlexFull>
               <Balance fontSize="14px" isDisabled={isFinished} value={blocksRemaining} decimals={0} />
             </Row>
           )}
           <Flex mb="4px">
-            <TokenLink onClick={() => registerToken(tokenAddress, tokenName, tokenDecimals, imageSrc)}>
+            <TokenLink style={{fontFamily:'avenir',color:'white'}} onClick={() => registerToken(tokenAddress, tokenName, tokenDecimals, imageSrc)}>
               Add {tokenName} to Metamask
             </TokenLink>
             <MetamaskIcon height={15} width={15} ml="4px" />
           </Flex>
-          <TokenLink href={projectLink} target="_blank">
+          <TokenLink style={{fontFamily:'avenir',color:'white'}} href={projectLink} target="_blank">
             {TranslateString(412, 'View project site')}
           </TokenLink>
         </Details>

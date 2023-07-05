@@ -36,16 +36,16 @@ const Farm: React.FC = () => {
     <Page>
       <Hero>
         <div>
-          <Heading as="h1" size="xxl" mb="16px">
+          <Heading style={{fontFamily:'avenir',color:'white'}} as="h1" size="xxl" mb="16px">
             {TranslateString(738, 'Syrup Pool on AQUA')}
           </Heading>
           <ul>
-            <li>{TranslateString(580, 'Stake AQUA to earn new tokens.')}</li>
-            <li>{TranslateString(486, 'You can unstake at any time.')}</li>
-            <li>{TranslateString(406, 'Rewards are calculated per block.')}</li>
+            <li style={{fontFamily:'avenir',color:'white'}}>{TranslateString(580, 'Stake AQUA to earn new tokens.')}</li>
+            <li style={{fontFamily:'avenir',color:'white'}}>{TranslateString(486, 'You can unstake at any time.')}</li>
+            <li style={{fontFamily:'avenir',color:'white'}}>{TranslateString(406, 'Rewards are calculated per block.')}</li>
           </ul>
         </div>
-        <img src="/images/syrup.png" alt="SYRUP POOL icon" width={410} height={191} />
+        {/* <img src="/images/syrup.png" alt="SYRUP POOL icon" width={410} height={191} />  */}
       </Hero>
       {/* <PoolTabButtons stackedOnly={stackedOnly} setStackedOnly={setStackedOnly} /> */}
       <Divider />

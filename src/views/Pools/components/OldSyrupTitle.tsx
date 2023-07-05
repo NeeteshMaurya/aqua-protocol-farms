@@ -22,8 +22,8 @@ const OldSyrupTitle: React.FC<Props> = ({ hasBalance = false }) => {
   if (hasBalance) {
     return (
       <div>
-        <Title>Action Required</Title>
-        <ActionLink
+        <Title style={{fontFamily:'avenir',color:'white'}}>Action Required</Title>
+        <ActionLink style={{fontFamily:'avenir',color:'white'}}
           href=" https://pancakeswap.medium.com/urgent-action-required-changes-to-syrup-pools-70b98d7b2541"
           target="_blank"
         >
@@ -35,7 +35,7 @@ const OldSyrupTitle: React.FC<Props> = ({ hasBalance = false }) => {
 
   return (
     <div>
-      <CardTitle isFinished>FINISHED</CardTitle>
+      <CardTitle style={{fontFamily:'avenir',color:'white'}} isFinished>FINISHED</CardTitle>
     </div>
   )
 }

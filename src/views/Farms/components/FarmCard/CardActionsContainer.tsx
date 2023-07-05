@@ -62,7 +62,7 @@ const CardActions: React.FC<FarmCardActionsProps> = ({ farm, account, addLiquidi
         addLiquidityUrl={addLiquidityUrl}
       />
     ) : (
-      <Button mt="8px" width="100%" disabled={requestedApproval} onClick={handleApprove}>
+      <Button style={{fontFamily:'avenir',borderRadius:'2px',background:'#1214fd',border:'none'}} mt="8px" width="100%" disabled={requestedApproval} onClick={handleApprove}>
         {TranslateString(758, 'Approve Contract')}
       </Button>
     )
@@ -71,20 +71,20 @@ const CardActions: React.FC<FarmCardActionsProps> = ({ farm, account, addLiquidi
   return (
     <Action>
       <Flex>
-        <Text bold textTransform="uppercase" color="secondary" fontSize="12px" pr="3px">
+        <Text style={{fontFamily:'avenir',color:'white'}} bold textTransform="uppercase" color="secondary" fontSize="12px" pr="3px">
           {/* TODO: Is there a way to get a dynamic value here from useFarmFromSymbol? */}
           AQUA
         </Text>
-        <Text bold textTransform="uppercase" color="textSubtle" fontSize="12px">
+        <Text style={{fontFamily:'avenir',color:'white'}} bold textTransform="uppercase" color="textSubtle" fontSize="12px">
           {TranslateString(1072, 'Earned')}
         </Text>
       </Flex>
       <HarvestAction earnings={earnings} pid={pid} />
       <Flex>
-        <Text bold textTransform="uppercase" color="secondary" fontSize="12px" pr="3px">
+        <Text style={{fontFamily:'avenir',color:'white'}} bold textTransform="uppercase" color="secondary" fontSize="12px" pr="3px">
           {lpName}
         </Text>
-        <Text bold textTransform="uppercase" color="textSubtle" fontSize="12px">
+        <Text style={{fontFamily:'avenir',color:'white'}} bold textTransform="uppercase" color="textSubtle" fontSize="12px">
           {TranslateString(1074, 'Staked')}
         </Text>
       </Flex>

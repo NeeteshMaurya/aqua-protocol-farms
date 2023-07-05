@@ -56,6 +56,7 @@ const Button: React.FC<ButtonProps> = ({ children, disabled, href, onClick, size
 
   return (
     <StyledButton
+    style={{fontFamily:'avenir',color:'white',borderRadius:'2px',background:'#1214fd',border:'none'}}
       boxShadow={boxShadow}
       color={buttonColor}
       disabled={disabled}

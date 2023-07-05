@@ -42,17 +42,17 @@ const DetailsSection: React.FC<ExpandableSectionProps> = ({
   return (
     <Wrapper>
       <Flex justifyContent="space-between">
-        <Text>{TranslateString(316, 'Stake')}:</Text>
-        <StyledLinkExternal href={addLiquidityUrl}>{lpLabel}</StyledLinkExternal>
+        <Text style={{fontFamily:'avenir',color:'white'}}>{TranslateString(316, 'Stake')}:</Text>
+        <StyledLinkExternal style={{color:'white'}} href={addLiquidityUrl}>{lpLabel}</StyledLinkExternal>
       </Flex>
       {!removed && (
         <Flex justifyContent="space-between">
-          <Text>{TranslateString(23, 'Total Liquidity')}:</Text>
-          <Text>{totalValueFormated}</Text>
+          <Text style={{fontFamily:'avenir',color:'white'}}>{TranslateString(23, 'Total Liquidity')}:</Text>
+          <Text style={{fontFamily:'avenir',color:'white'}}>{totalValueFormated}</Text>
         </Flex>
       )}
       <Flex justifyContent="flex-start">
-        <Link external href={bscScanAddress} bold={false}>
+        <Link style={{fontFamily:'avenir',color:'white'}} external href={bscScanAddress} bold={false}>
           {TranslateString(356, 'View on BscScan')}
         </Link>
       </Flex>

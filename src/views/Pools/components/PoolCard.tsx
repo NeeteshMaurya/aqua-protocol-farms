@@ -119,10 +119,10 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
   }, [onApprove, setRequestedApproval])
 
   return (
-    <Card isActive={isCardActive} isFinished={isFinished && sousId !== 0}>
+    <Card style={{borderRadius:'2px',background:'rgba(20,30,50,0.80)'}} isActive={isCardActive} isFinished={isFinished && sousId !== 0}>
       {isFinished && sousId !== 0 && <PoolFinishedSash />}
       <div style={{ padding: '24px' }}>
-        <CardTitle isFinished={isFinished && sousId !== 0}>
+        <CardTitle style={{fontFamily:'avenir',color:'white'}} isFinished={isFinished && sousId !== 0}>
           {isOldSyrup && '[OLD]'} {tokenName} {TranslateString(348, 'Pool')}
         </CardTitle>
         <div style={{ marginBottom: '8px', display: 'flex', alignItems: 'center' }}>
@@ -130,7 +130,7 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
             <Image src={`/images/pools/${poolImage}`} alt={tokenName} width={64} height={64} />
           </div>
           {account && harvest && !isOldSyrup && (
-            <HarvestButton
+            <HarvestButton 
               disabled={!earnings.toNumber() || pendingTx}
               text={pendingTx ? 'Collecting' : 'Harvest'}
               onClick={async () => {
@@ -161,13 +161,13 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
           {account &&
             (needsApproval && !isOldSyrup ? (
               <div style={{ flex: 1 }}>
-                <Button disabled={isFinished || requestedApproval} onClick={handleApprove} width="100%">
+                <Button style={{fontFamily:'avenir',borderRadius:'2px',background:'#1214fd',border:'none'}} disabled={isFinished || requestedApproval} onClick={handleApprove} width="100%">
                   {`Approve ${stakingTokenName}`}
                 </Button>
               </div>
             ) : (
               <>
-                <Button
+                <Button style={{fontFamily:'avenir',borderRadius:'2px',background:'#1214fd',border:'none'}}
                   disabled={stakedBalance.eq(new BigNumber(0)) || pendingTx}
                   onClick={
                     isOldSyrup
@@ -199,7 +199,7 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
           )}
         </StyledDetails> */}
         <StyledDetails>
-          <div>{TranslateString(384, 'Your Stake')}:</div>
+          <div style={{fontFamily:'avenir',color:'white'}}>{TranslateString(384, 'Your Stake')}:</div>
           <Balance
             fontSize="14px"
             isDisabled={isFinished}
