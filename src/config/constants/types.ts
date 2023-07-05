@@ -26,7 +26,7 @@ export interface Ifo {
 }
 
 export enum QuoteToken {
-  'BNB' = 'BNB',
+  'BNB' = 'ARB',
   'CAKE' = 'AQUA',
   'SYRUP' = 'SYRUP',
   'BUSD' = 'BUSD',

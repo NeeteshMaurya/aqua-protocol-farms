@@ -97,7 +97,7 @@ interface FarmCardProps {
 const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice, ethPrice, account }) => {
   const TranslateString = useI18n()
 
-  const [showExpandableSection, setShowExpandableSection] = useState(false)
+  const [showExpandableSection, setShowExpandableSection] = useState(true)
 
   const isCommunityFarm = communityFarms.includes(farm.tokenSymbol)
   // We assume the token name is coin pair + lp e.g. CAKE-BNB LP, LINK-BNB LP,
@@ -124,7 +124,9 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice,
     ? `$${Number(totalValue).toLocaleString(undefined, { maximumFractionDigits: 0 })}`
     : '-'
 
-  const lpLabel = farm.lpSymbol && farm.lpSymbol.toUpperCase().replace('PANCAKE', '')
+  const lpLabel = 'AQUA-ARB'
+  // farm.lpSymbol && farm.lpSymbol.toUpperCase().replace('PANCAKE', 'ARB')
+
   const earnLabel = farm.dual ? farm.dual.earnLabel : 'AQUA'
 
   const farmAPY =

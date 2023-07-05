@@ -10,14 +10,20 @@ const FarmTabButtons = () => {
 
   return (
     <Wrapper>
-      <ButtonMenu activeIndex={isExact ? 0 : 1} scale="sm" variant="subtle">
-        <ButtonMenuItem className='connectwalletbtn' style={{borderRadius:'2px',background:'#1214fd',fontFamily:'avenir',color:'white'}} as={Link} to={`${url}`}>
+      {/* <ButtonMenu activeIndex={isExact ? 0 : 1} scale="sm" variant="subtle"> */}
+        <Link className='btn connectwalletbtn' style={{background:'#1214fd',fontFamily:'avenir',color:'white'}}  to={`${url}`}>
           {TranslateString(1198, 'Live')}
-        </ButtonMenuItem>
-        <ButtonMenuItem style={{fontFamily:'avenir',borderRadius:'2px',background:'#1214fd'}} as={Link} to={`${url}/history`}>
+        </Link>
+        <Link className='btn connectwalletbtn' style={{fontFamily:'avenir',background:'#1214fd',marginLeft:'10px'}}  to={`${url}/history`}>
           {TranslateString(388, 'Finished')}
-        </ButtonMenuItem>
-      </ButtonMenu>
+        </Link>
+        {/* <ButtonMenuItem  style={{background:'#1214fd',fontFamily:'avenir',color:'white'}} as={Link} to={`${url}`}>
+          {TranslateString(1198, 'Live')}
+        </ButtonMenuItem> */}
+        {/* <ButtonMenuItem style={{fontFamily:'avenir',background:'#1214fd'}} as={Link} to={`${url}/history`}>
+          {TranslateString(388, 'Finished')}
+        </ButtonMenuItem> */}
+      {/* </ButtonMenu> */}
     </Wrapper>
   )
 }
