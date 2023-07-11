@@ -4,7 +4,7 @@
 /* eslint-disable no-undef */
 import React, { useEffect, useState, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Link, useHistory } from "react-router-dom";
+import { Link, useHistory,useLocation } from "react-router-dom";
 import { useWeb3React } from '@web3-react/core'
 import UnlockButton from "components/UnlockButton";
 import '../../assets/header.css'
@@ -16,9 +16,7 @@ import ethIcon from "../../assets/images/mainIcons/ethIcon.png";
 
 const Header = () => {
 	const { account, activate, deactivate } = useWeb3React()
-	// const { account } = useActiveWeb3React()
-	// const [add, setAdd] = useState()
-	// const [bal, setBal] = useState()
+	const location = useLocation()
   const [showWallet,setShowWallet] = useState(false)
 	
 	return (
@@ -39,13 +37,14 @@ const Header = () => {
               >
                 <span className="navbar-toggler-icon" />
               </button> 
-              <div className="collapse navbar-collapse justify-content-end" style={{marginLeft:'60px'}} id="navbarNav">
+              <div className="collapse navbar-collapse justify-content-end headermargin" style={{marginLeft:'60px'}} id="navbarNav">
                 <ul className="navbar-nav">
                   <li className="nav-item">
                   <Link
-                    style={{color:'white'}}
+                  style={location.pathname==='/farms' ? {color:'white'} : {color:'#939db0'}}
                       type="button" 
-                      className="nav-link btn btn-link navbarbtn buttonn"
+                      className={location.pathname==='/farms' ? "nav-link btn btn-link navbarbtn buttonn headerr " 
+                      : "nav-link btn btn-link navbarbtn buttonn "}
                       to="/farms"
                     >
                       Farms
@@ -53,9 +52,10 @@ const Header = () => {
                   </li>
                   <li className="nav-item">
                     <Link
-                    style={{color:'white'}}
+                    style={location.pathname==='/pools' ? {color:'white'} : {color:'#939db0'}}
                       type="button"
-                      className="nav-link btn btn-link navbarbtn buttonn"
+                      className={location.pathname==='/pools' ? "nav-link btn btn-link navbarbtn buttonn headerr" 
+                      : "nav-link btn btn-link navbarbtn buttonn "}
                       to="/pools"
                     >
                       Pools
@@ -63,7 +63,7 @@ const Header = () => {
                   </li>
                   <li className="nav-item">
                     <a
-                    style={{color:'white'}}
+                    style={{color:'#939db0'}}
                       type="button"
                       className="nav-link navbarbtn btn btn-link buttonn"
                       href="https://launch.aquaprotocol.com"
@@ -73,9 +73,9 @@ const Header = () => {
                   </li> 
 				</ul>
 			</div>
-			<div className="collapse navbar-collapse justify-content-end" id="navbarNav">
+			<div className="collapse navbar-collapse justify-content-end headermargin" id="navbarNav">
 				<ul className="navbar-nav">
-					<li className="nav-item headerdiv">
+					<li className="nav-item headermargin2">
 						{!account ? (
 								<div onClick={()=>setShowWallet(true)}><UnlockButton width="100%" /></div>
 							) : 

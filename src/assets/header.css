@@ -2,6 +2,22 @@
     background-color: #cbccdb;
     border-radius: 10px;
 } */
+@media(min-width: 762px){
+    .headerr{
+        display: inline-block;
+        position: relative;
+    }
+    .headerr:after{
+        position: absolute;
+        content: '';
+        border-bottom: 2px solid blue;
+        width: 60px;
+        bottom: -14.5px;
+        transform: translateX((-50%));
+        left: 0%;
+    }
+}
+
 
 .logo{
     margin-left: 41px;
@@ -23,6 +39,13 @@
     /* background: #1214FD; */
     border-radius: 0%;
 }
+.selectedbtnclr{
+    color:white;
+}
+.normalbtnclr{
+    color: #939db0;
+}
+
 .connectwalletbtn{
     background: #1214fd;
     color:'white';
@@ -35,10 +58,34 @@
     width: 480px;
     background: #070f20;
 }
+.mtmskbtn{
+    height: 72px;
+    width: 422px;
+    margin-left: 32px;
+}
+.learnconnect{
+    color:#1214fd;
+    font-family: avenir;
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 16px;
+    letter-spacing: 0.42px;
+}
 
 @media(max-width: 480px){
+    .mtmskbtn{
+        width: 242px;
+        height: 72px;
+        margin-left: 52px;
+    }
     .mtmsk{
         width: 350px;
+    }
+    .headermargin{
+        margin-right: 65px;
+    }
+    .headermargin2{
+        margin-left: 80px;
     }
 }
 
